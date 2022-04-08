@@ -1,7 +1,7 @@
 from collections import Counter
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        count_s = Counter(s)
-        count_t = Counter(t)
         
-        return count_s == count_t
+        s_map, t_map = Counter(s), Counter(t)
+        return s_map == t_map
+        
