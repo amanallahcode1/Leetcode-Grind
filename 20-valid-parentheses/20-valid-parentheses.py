@@ -4,19 +4,32 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        stack = []
-        hash_map = {
+       # hash_map {(: ), {:}, }
+       # if i find open tag:
+        # add hash_map[open], (which is closing tag) to stack
+        # if i find closing tag:
+            # pop from stack:
+            # if they dont match return false
+        
+    # if by end: stack is empty: return true
+    
+        close_open = {
             '(': ')',
             '{': '}',
             '[': ']'
         }
-        for char in s:
-            if char in hash_map:
-                stack.append(char)
+        
+        stack = []
+        
+        for i in s:
+            if i in close_open:
+                stack.append(close_open[i])
             else:
-                if len(stack) == 0:
+                if stack and stack[-1] == i:
+                    stack.pop()
+                else:
                     return False
-                open_tag = stack.pop()
-                if hash_map[open_tag] != char:
-                    return False
-        return len(stack) == 0
+                
+        return True if not stack else False
+        
+                
