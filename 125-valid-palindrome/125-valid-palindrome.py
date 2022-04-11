@@ -1,8 +1,10 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        s_new = ''.join(c for c in s if c.isalnum() == True).lower()
-        rev = reversed(s_new)
-        reversed_string = ''.join(rev)
-        return reversed_string == s_new
-    
+        new_s = ''.join([ch for ch in s if (ch.isalnum())]).lower()
+        r = len(new_s) - 1
+        for l in range(len(new_s)):
+            if new_s[l] != new_s[r]:
+                return False
+            r -= 1
+        return True
         
