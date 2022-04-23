@@ -16,7 +16,7 @@ class Solution:
         
         new_n = 0
         for i in str(n):
-            new_n += (int(i) * int(i))
+            new_n += (int(i) ** 2)
         return new_n
             
         
