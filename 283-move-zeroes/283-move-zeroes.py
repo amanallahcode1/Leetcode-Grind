@@ -10,7 +10,7 @@ class Solution:
                 nums[i] = 0
                 nums[index] = temp
                 index += 1
-        print(nums)
+        # Space -> O(1) & Time -> O(n)
         
         
             
