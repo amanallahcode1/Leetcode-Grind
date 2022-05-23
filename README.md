@@ -1,2 +1,2 @@
 # Leetcode-Grind
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
+Leetcode questions that I have completed thus far, with solutions and problem statements.
